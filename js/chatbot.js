@@ -1,4 +1,4 @@
-// js/chatbot.js — the floating chatbot.
+//js/chatbot.js — the floating chatbot.
 // 1st choice: AI reply from our Vercel function (/api/chat), if it's set up.
 // Backup:     rule-based reply from the qa object below (always works, even offline).
 // ✏ CUSTOMIZE: edit data/profile.js (your info) and the keywords below.
@@ -29,7 +29,7 @@ ${list(profile.learning)}.`
 education: {
 keywords: ["school", "study", "studies", "education", "grade", "strand", "aral", "nag-aaral", 
 "college"],
-answer: profile.education.map(e => `🎓 ${e.level} at ${e.school} (${e.years})`).join("\n")
+answer: "🎓 Senior High School - ICT strand at Eclaro Academy (2025-2027)"
 },
 projects: {
 keywords: ["project", "built", "build", "made", "portfolio", "gawa", "work"],
@@ -50,7 +50,8 @@ answer: profile.ojt
 },
 contact: {
 keywords: ["contact", "email", "reach", "github", "message", "hire"],
-answer: `You can email ${profile.contact.email} or check GitHub: ${profile.contact.github}`
+answer: `You can email levinandreidomingo@gmail.com check GitHub: levinandreidomingo-collab`
+
 
 },
 thanks: {
@@ -58,7 +59,8 @@ keywords: ["thank", "thanks", "salamat", "ty"],
 answer: "You're welcome! 😊 Anything else you'd like to know?"
 }
 };
-const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or how to contact me!"
+
+const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or how to contact me!";
 
 
 // ---------- 3. Find the best rule-based reply ----------
@@ -129,14 +131,13 @@ function showTyping() {
 const li = document.createElement("li");
 li.className = "message bot typing";
 li.setAttribute("aria-label", "Typing");
-}
 
 
 li.innerHTML = "<span></span><span></span><span></span>";
 messages.appendChild(li);
 messages.scrollTop = messages.scrollHeight;
 return li;
-
+}
 function setMode(text) { modeLabel.textContent = text; }
 function openChat() {
 panel.hidden = false;
@@ -195,5 +196,3 @@ handleQuestion(input.value);
 document.querySelectorAll("#quick-replies button").forEach(function (btn) {
 btn.addEventListener("click", () => handleQuestion(btn.dataset.question));
 });
-
-

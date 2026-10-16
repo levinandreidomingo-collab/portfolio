@@ -1,12 +1,11 @@
 // data/profile.js — YOUR info lives here. ✏ Replace every value with your own.
 // Used by BOTH chatbots: the rule-based bot (js/chatbot.js) and the AI (api/chat.js).
 // ⚠ This file is PUBLIC. Never add your home address, phone number, birthday,
-//    
-ID, passwords
+//school, ID, passwords, or API keys.
 const profile = {
-name: "Juan Dela Cruz",          
+name: "Levin Domingo",
 // EXAMPLE ONLY — change to your name
-shortName: "Juan",
+shortName: "Levin",
 role: "Grade 12 student & aspiring web developer",
 location: "Philippines",
 about:
