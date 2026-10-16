@@ -56,6 +56,11 @@ answer: "You can email levinandreidomingo@gmail.com check GitHub: levinandreidom
 aying: {
 keywords: ["pogi ba si aying?", "gwapo ba si aying?", "masarap ba si aying"],
 answer: "putanginamo aying"
+},
+
+relationship: {
+keywords: ["is being in relationship is peak?", "is being in relationship is peak", "Is being in relationship is peak?", "Is being in relationship is peak"],
+answer: "yes, and i would say that the most peak relationship that i've ever see is Levin and Leah's relationship"
 
 
 },
