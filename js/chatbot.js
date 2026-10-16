@@ -60,7 +60,7 @@ answer: "putanginamo aying"
 
 relationship: {
 keywords: ["is being in relationship is peak?", "is being in relationship is peak", "Is being in relationship is peak?", "Is being in relationship is peak"],
-answer: "yes, and i would say that the most peak relationship that i've ever see is Levin and Leah's relationship"
+answer: "yes, and i would say that the most peak relationship that i've ever seen is Levin and Leah's relationship"
 
 
 },
