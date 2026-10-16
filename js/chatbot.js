@@ -1,4 +1,4 @@
-//js/chatbot.js — the floating chatbot.
+// js/chatbot.js — the floating chatbot.
 // 1st choice: AI reply from our Vercel function (/api/chat), if it's set up.
 // Backup:     rule-based reply from the qa object below (always works, even offline).
 // ✏ CUSTOMIZE: edit data/profile.js (your info) and the keywords below.
@@ -50,7 +50,12 @@ answer: profile.ojt
 },
 contact: {
 keywords: ["contact", "email", "reach", "github", "message", "hire"],
-answer: `You can email levinandreidomingo@gmail.com check GitHub: levinandreidomingo-collab`
+answer: "You can email levinandreidomingo@gmail.com check GitHub: levinandreidomingo-collab"
+},
+
+aying: {
+keywords: ["pogi ba si aying?", "gwapo ba si aying?", "masarap ba si aying"],
+answer: "putanginamo aying"
 
 
 },
@@ -59,7 +64,6 @@ keywords: ["thank", "thanks", "salamat", "ty"],
 answer: "You're welcome! 😊 Anything else you'd like to know?"
 }
 };
-
 const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or how to contact me!";
 
 
@@ -196,3 +200,4 @@ handleQuestion(input.value);
 document.querySelectorAll("#quick-replies button").forEach(function (btn) {
 btn.addEventListener("click", () => handleQuestion(btn.dataset.question));
 });
+
