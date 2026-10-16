@@ -2,7 +2,7 @@
 // Used by BOTH chatbots: the rule-based bot (js/chatbot.js) and the AI (api/chat.js).
 // ⚠ This file is PUBLIC. Never add your home address, phone number, birthday,
 //    
-school ID, passwords, or API keys.
+ID, passwords
 const profile = {
 name: "Juan Dela Cruz",          
 // EXAMPLE ONLY — change to your name
