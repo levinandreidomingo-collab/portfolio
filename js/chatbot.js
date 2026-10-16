@@ -53,14 +53,10 @@ keywords: ["contact", "email", "reach", "github", "message", "hire"],
 answer: `You can email ${profile.contact.email} or check GitHub: ${profile.contact.github}`
 
 },
-60 lines · continues if split ↓
+// 60 lines . continues if split
 thanks: {
 keywords: ["thank", "thanks", "salamat", "ty"],
 answer: "You're welcome! 😊 Anything else you'd like to know?"
 }
 };
-const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or 
-how to contact me!";
-
-
-
+const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or how to contact me!"
