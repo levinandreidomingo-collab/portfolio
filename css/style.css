@@ -4,7 +4,7 @@ Portfolio Starter — style.css
 [data-theme="dark"] to make the site your own.
 ========================================================= */
 /* ---------- 1. Theme variables ---------- */
-:root {--accent: #6366f1;            /* main color (indigo) */--accent-2: #ec4899;          /* second color for gradients (pink) */--accent-3: #06b6d4;          /* third color (cyan) */--gradient: linear-gradient(135deg, var(--accent), var(--accent-2));--bg: #f8fafc;--bg-alt: #eef2ff;--surface: #ffffff;--text: #0f172a;--muted: #64748b;--border: #e2e8f0;--shadow: 0 10px 30px rgba(15, 23, 42, 0.08);--nav-bg: rgba(248, 250, 252, 0.8);--chip-bg: #eef2ff;--chip-text: #4338ca;--bot-bubble: #f1f5f9;--glow-1: rgba(99, 102, 241, 0.30);--glow-2: rgba(236, 72, 153, 0.20);--radius: 16px;--font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;--max: 1100px;
+:root {--accent: #6366f1;            /* main color (indigo) */--accent-2: #ec4899;          /* second color for gradients (pink) */--accent-3: #06b6d4;          /* third color (cyan) */--gradient: linear-gradient: linear-gradient(135deg, #16a34a, #065f46);--bg: #f8fafc;--bg-alt: #eef2ff;--surface: #ffffff;--text: #0f172a;--muted: #64748b;--border: #e2e8f0;--shadow: 0 10px 30px rgba(15, 23, 42, 0.08);--nav-bg: rgba(248, 250, 252, 0.8);--chip-bg: #eef2ff;--chip-text: #4338ca;--bot-bubble: #f1f5f9;--glow-1: rgba(99, 102, 241, 0.30);--glow-2: rgba(236, 72, 153, 0.20);--radius: 16px;--font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;--max: 1100px;
 }
 /* ---------- 2. Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -65,7 +65,16 @@ border-bottom: 1px solid transparent; transition: border-color 0.3s, box-shadow 
 .logo { display: flex; align-items: center; gap: 0.6rem; font-weight: 800; font-size: 1.15rem; color: 
 var(--text); }
 .logo:hover { text-decoration: none; }
-.logo-badge { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; 
+.logo-badge {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    padding: 0;
+    flex-shrink: 0;
 background: var(--gradient); color: #fff; font-size: 0.85rem; }
 .nav-links { display: flex; gap: 0.25rem; list-style: none; margin: 0; padding: 0; }
 .nav-links a { color: var(--muted); font-weight: 600; padding: 0.5rem 0.85rem; border-radius: 10px; 
@@ -190,7 +199,7 @@ padding: 0.15rem 0.6rem; border-radius: 999px; }
 /* contact */
 .contact-card {
 text-align: center; padding: 3rem 1.5rem; border-radius: 24px; color: #fff;
-background: var(--gradient); box-shadow: 0 20px 50px rgba(99, 102, 241, 0.35);
+background: linear-gradient(135deg, #16a34a, #065f46); box-shadow: 0 20px 50px rgba(99, 102, 241, 0.35);
 }
 .contact-card p { opacity: 0.92; }
 .contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top: 
@@ -263,7 +272,7 @@ box-shadow: var(--shadow); display: none;
 .chat-launcher {
 position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 100;
 width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer;
-background: var(--gradient); color: #fff; font-size: 1.6rem;
+background: linear-gradient(135deg, #16a34a, #4ade80); color: #fff; font-size: 1.6rem;
 box-shadow: 0 12px 30px rgba(99, 102, 241, 0.45); transition: transform 0.2s;
 }
 .chat-launcher:hover { transform: scale(1.07); }
@@ -299,8 +308,7 @@ flex-direction: column; gap: 0.6rem; background: var(--bg); }
 1.5; animation: pop-in 0.2s ease; white-space: pre-wrap; overflow-wrap: anywhere; }
 .message.bot { align-self: flex-start; background: var(--bot-bubble); color: var(--text); 
 border-bottom-left-radius: 4px; }
-.message.user { align-self: flex-end; background: var(--gradient); color: #fff; border-bottom-right-radius: 
-4px; }
+.message.user { align-self: flex-end; background: linear-gradient(135deg, #16a34a, #4ade80); color: #fff; border-bottom-right-radius: 4px; }
 /* typing indicator (three bouncing dots) */
 .typing { display: inline-flex; gap: 4px; padding: 0.85rem 1rem; }
 .typing span { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: bounce 
@@ -316,7 +324,7 @@ border: 1.5px solid var(--accent); background: transparent; color: var(--accent)
 border-radius: 999px; padding: 0.3rem 0.8rem; font: 700 0.82rem var(--font); cursor: pointer;
 transition: background-color 0.2s, color 0.2s;
 }
-.quick-replies button:hover { background: var(--accent); color: #fff; }
+.quick-replies button:hover { background: #16a34a; color: #fff; }
 .chat-form { display: flex; gap: 0.5rem; padding: 0.8rem; background: var(--surface); }
 .chat-form input {
 flex: 1; min-width: 0; padding: 0.75rem 1rem; border-radius: 999px; font: 1rem var(--font);
@@ -325,7 +333,7 @@ border: 1.5px solid var(--border); background: var(--bg); color: var(--text);
 .chat-form input:focus { outline: none; border-color: var(--accent); }
 .chat-form button {
 width: 46px; height: 46px; flex-shrink: 0; border-radius: 50%; border: none; cursor: pointer;
-background: var(--gradient); color: #fff; font-size: 1.1rem;
+background: linear-gradient(135deg, #16a34a, #4ade80); color: #fff; font-size: 1.1rem;
 }
 .chat-form button:disabled { opacity: 0.5; cursor: wait; }
 
@@ -340,7 +348,7 @@ background: var(--gradient); color: #fff; font-size: 1.1rem;
 
   background:
     linear-gradient(#15152b, #15152b) padding-box,
-    linear-gradient(135deg, #667aff, #b66dff, #ff6bcb) border-box !important;
+    linear-gradient(135deg, #00ff88, #00cc44) border-box !important;
 
   box-sizing: border-box !important;
   display: grid !important;
@@ -361,4 +369,18 @@ background: var(--gradient); color: #fff; font-size: 1.1rem;
   display: block !important;
   object-fit: cover !important;
   border-radius: 50% !important;
+}
+
+
+.logo-badge {
+    overflow: hidden;
+    padding: 0;
+}
+
+.logo-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
