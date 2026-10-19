@@ -41,7 +41,12 @@ border: 2px solid transparent; cursor: pointer;
 transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 .btn:hover { transform: translateY(-2px); text-decoration: none; }
-.btn-primary { background: var(--gradient); color: #fff; box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35); }
+.btn-primary {
+    background: #22c55e;
+    color: #fff;
+    border-color: #22c55e;
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.25);
+}
 .btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 .icon-btn {
